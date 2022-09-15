@@ -13,4 +13,4 @@ To run the project with nodemon (you must have nodemon installed globally on you
 npm run start-dev
 ```
 
-1:19
+1:30   
