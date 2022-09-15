@@ -1,12 +1,13 @@
 const express = require('express');
 const { products } = require('../../data/data');
-
+const loggerMiddleware = require('../../middlewares/logger')
 const router = express.Router();
-
+router.use(loggerMiddleware)
 
 router.get('/', (req, res) => {
     const { maxPrice, search } = req.query;
     let productsResponse = [...products];
+    console.log(req.user) 
     if (Object.keys(req.query).length > 0) {
       if (maxPrice) {
         if (isNaN(+maxPrice)) {

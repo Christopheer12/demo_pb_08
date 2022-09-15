@@ -14,8 +14,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api',apiRoutes)
 app.use(express.static('nav-app'))
-
-app.use(loggerMiddleware)
+/* 
+app.use(loggerMiddleware) */
 
 /* app.get('/',(req,res)=>{
   res.sendFile(path.resolve(__dirname,'./nav-app/index.html'))
